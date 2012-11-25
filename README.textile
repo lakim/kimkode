@@ -1,0 +1,25 @@
+h1. TODO
+
+* content helper: content(slug) => OK
+* specify layout per type => OK
+* view per type => OK
+* posts#index => OK
+* tags#show => OK
+* tags helper => OK
+* code highlight
+* caching
+* reload if Rails cache is disabled
+* pagination
+* manage drafts (*)
+* manage index in folders
+* tests tests tests
+* RSS feed
+* menu file => Menu.items
+
+* extract engine
+** names : devcms, hackercms
+
+h1. Design inspiration
+
+http://weareimpero.com/
+http://thisisyoke.com/

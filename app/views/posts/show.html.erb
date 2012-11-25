@@ -1,0 +1,6 @@
+<h1><%= @post.title %></h1>
+<% if @post.author %>
+  <div><%= @post.author %></div>
+<% end %>
+<div><%= l(@post.published_at) %></div>
+<div><%= @body %></div>

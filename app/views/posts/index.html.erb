@@ -1,0 +1,19 @@
+<% if @posts.size == 0 %>
+  <div>Add a post in /content/posts</div>
+<% else %>
+  <ul>
+    <% @posts.each do |post| %>
+      <li>
+        <%= l(post.published_at) %>
+        <%= link_to post.title, content_path(post.slug) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Tags</h2>
+<ul>
+  <% Tag.all.each do |tag| %>
+    <li><%= link_to tag.name, tag_path(tag.id) %> (<%= tag.post_count %>)</li>
+  <% end %>
+</ul>
