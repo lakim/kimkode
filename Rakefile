@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Lkode::Application.load_tasks
+Kimkode::Application.load_tasks
