@@ -1,0 +1,6 @@
+---
+title: Why devcms ?
+---
+* Experiment with Rails engines
+* Build a nice gem
+* Give back some love to the community !
