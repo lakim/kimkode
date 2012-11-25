@@ -66,4 +66,8 @@ class Content
     @layout ||= "application"
   end
 
+  def path
+    slug
+  end
+
 end

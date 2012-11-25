@@ -1,0 +1,18 @@
+<div class="jumbotron">
+  <h1>Rails and iOS<br/>agile developer</h1>
+  <p class="lead">Follow me on Twitter and Github!</p>
+  <a class="btn btn-large btn-success" href="mailto:louis@kimkode.com">Contact me</a>
+</div>
+<hr/>
+<div class="row-fluid marketing">
+  <div class="span6">
+    <% @posts.even_values.each do |post| %>
+      <%= render :partial => "post", :object => post %>
+    <% end %>
+  </div>
+  <div class="span6">
+    <% @posts.odd_values.each do |post| %>
+      <%= render :partial => "post", :object => post %>
+    <% end %>
+  </div>
+</div>
