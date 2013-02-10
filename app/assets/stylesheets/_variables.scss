@@ -1,0 +1,189 @@
+// GLOBAL VALUES
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+$black:                 #424242;
+$grayDarker:            #222;
+$grayDark:              #7C7C7C;
+$gray:                  #8A8A8A;
+$grayLight:             #999;
+$grayLighter:           #CACACA;
+$white:                 #fff;
+
+
+// Accent colors
+// -------------------------
+$blue:                  #049cdb;
+$blueDark:              #0064cd;
+$green:                 #BDD372;
+$red:                   #9C0001;
+$yellow:                #ffc40d;
+$orange:                #f89406;
+$pink:                  #c3325f;
+$purple:                #7a43b6;
+
+
+// Scaffolding
+// -------------------------
+$bodyBackground:        #F9F9F9;
+$textColor:             $gray;
+
+
+// Links
+// -------------------------
+$linkColor:             $green;
+$linkColorHover:        darken($linkColor, 10%);
+
+
+// Typography
+// -------------------------
+$baseFontSize:          22px;
+$baseFontFamily:        "Book Antiqua", "Palatino Linotype", Palatino, serif;
+$baseLineHeight:        $baseFontSize * 1.6;
+$altFontFamily:         "Book Antiqua", "Palatino Linotype", Palatino, serif;
+
+$headingsFontFamily:    inherit; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    normal;    // instead of browser default, bold
+$headingsColor:         $grayDark; // empty to use BS default, $textColor
+
+
+// Tables
+// -------------------------
+$tableBackground:                   red; // overall background-color
+$tableBackgroundAccent:             darken($bodyBackground, .02); // for striping
+$tableBackgroundHover:              darken($bodyBackground, .04); // for hover
+$tableBorder:                       #ddd; // table and cell border
+
+
+// Buttons
+// -------------------------
+$btnBackground:                     $white;
+$btnBackgroundHighlight:            darken($white, .1);
+$btnBorder:                         darken($white, .2);
+
+$btnPrimaryBackground:              $linkColor;
+$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, .15);
+
+$btnInfoBackground:                 #5bc0de;
+$btnInfoBackgroundHighlight:        #2f96b4;
+
+$btnSuccessBackground:              #62c462;
+$btnSuccessBackgroundHighlight:     #51a351;
+
+$btnWarningBackground:              lighten($orange, .15);
+$btnWarningBackgroundHighlight:     $orange;
+
+$btnDangerBackground:               #ee5f5b;
+$btnDangerBackgroundHighlight:      #bd362f;
+
+$btnInverseBackground:              $gray;
+$btnInverseBackgroundHighlight:     $grayDarker;
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white;
+$inputBorder:                   #ccc;
+$inputDisabledBackground:       $grayLighter;
+
+
+// Dropdowns
+// -------------------------
+$dropdownBackground:            $white;
+$dropdownBorder:                rgba(0,0,0,.2);
+$dropdownLinkColor:             $linkColor;
+$dropdownLinkColorHover:        $linkColorHover;
+$dropdownLinkBackgroundHover:   red;
+
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+$zindexDropdown:          1000;
+$zindexPopover:           1010;
+$zindexTooltip:           1020;
+$zindexFixedNavbar:       1030;
+$zindexModalBackdrop:     1040;
+$zindexModal:             1050;
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $grayLighter;
+
+
+// Navbar
+// -------------------------
+$navbarHeight:                    40px;
+$navbarBackground:                $bodyBackground;
+$navbarBackgroundHighlight:       $bodyBackground;
+
+$navbarText:                      $textColor;
+$navbarLinkColor:                 $linkColor;
+$navbarLinkColorHover:            $linkColorHover;
+$navbarLinkColorActive:           $linkColorHover;
+$navbarLinkBackgroundHover:       red;
+$navbarLinkBackgroundActive:      $navbarBackground;
+
+$navbarSearchBackground:          lighten($navbarBackground, .25);
+$navbarSearchBackgroundFocus:     $white;
+$navbarSearchBorder:              darken($navbarSearchBackground, .3);
+$navbarSearchPlaceholderColor:    #ccc;
+
+
+// Hero unit
+// -------------------------
+$heroUnitBackground:              $white;
+$heroUnitHeadingColor:            inherit;
+$heroUnitLeadColor:               inherit;
+
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken(adjust-hue($warningBackground, -10), .03);
+
+$errorText:               #b94a48;
+$errorBackground:         #f2dede;
+$errorBorder:             darken(adjust-hue($errorBackground, -10), .03);
+
+$successText:             #468847;
+$successBackground:       #dff0d8;
+$successBorder:           darken(adjust-hue($successBackground, -10), .05);
+
+$infoText:                #3a87ad;
+$infoBackground:          #d9edf7;
+$infoBorder:              darken(adjust-hue($infoBackground, -10), .07);
+
+
+
+
+// GRID
+// --------------------------------------------------
+
+// Default 940px grid
+// -------------------------
+$gridColumns:             12;
+$gridColumnWidth:         60px;
+$gridGutterWidth:         20px;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+$fluidGridColumnWidth:    6.382978723%;
+$fluidGridGutterWidth:    2.127659574%;
