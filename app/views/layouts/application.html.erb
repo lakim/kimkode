@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kimkode</title>
+  <title>kimkode</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container-narrow">
-    <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="mailto:louis@kimkode.com">Contact</a></li>
-        </ul>
-        <h3 class="muted">KimKode</h3>
-      </div>
-      <hr/>
+  <header class="container show-grid">
+    <a id="logo" href="/"><%= image_tag("logo.png") %></a>
+    <h1><a href="/">kimkode</a></h1>
+    <h2>iOS and Ruby developer</h2>
+    <a id="twitter" href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a>
+  </header>
+  <div class="container">
     <%= yield %>
-    <hr/>
   </div>
 </body>
 </html>

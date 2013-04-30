@@ -1,0 +1,42 @@
+header {
+  position: relative;
+  margin: 80px 0 74px 0;
+  h1 {
+    margin: 0;
+    padding-top: 8px;
+    a, a:hover {
+      display: block;
+      padding-left: 80px;
+      font-size: 100px;
+      color: $black;
+      text-decoration: none;
+    }
+  }
+  h2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    font-family: $sansFontFamily;
+    font-size: 26px;
+    line-height: 22px;
+    color: #cacaca;
+  }
+  a#logo {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -68px;
+  }
+  a#twitter {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
