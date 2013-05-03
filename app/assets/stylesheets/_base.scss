@@ -1,6 +1,7 @@
-header {
+header.main {
   position: relative;
-  margin: 80px 0 74px 0;
+  margin-top: 80px;
+  margin-bottom: 42px;
   h1 {
     margin: 0;
     padding-top: 8px;
@@ -20,7 +21,7 @@ header {
     font-family: $sansFontFamily;
     font-size: 26px;
     line-height: 22px;
-    color: #cacaca;
+    color: $grayLighter;
   }
   a#logo {
     display: block;
@@ -33,6 +34,36 @@ header {
     position: absolute;
     right: 0;
     top: 0;
+  }
+}
+
+article {
+  margin-bottom: 50px;
+  header {
+    margin-bottom: 30px;
+    h1 {
+      $height: 38px;
+      font-size: $height;
+      line-height: $height;
+      margin-bottom: 0;
+      a, a:hover {
+        color: #7c7c7c;
+      }
+    }
+    small {
+      font-size: 20px;
+      font-style: italic;
+    }
+    time {
+      color: $grayLighter;
+    }
+    ul.tags {
+      display: inline;
+      margin: 0 0 0 10px;
+      li {
+        display: inline;
+      }
+    }
   }
 }
 

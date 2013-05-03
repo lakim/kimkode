@@ -5,25 +5,18 @@ class Tag
   # Finders
 
   def self.all
-    # TODO: add proper caching and/or reload in dev
-    @all || self._all
-  end
-
-  def self._all
-    Rails.logger.debug "!!! TAG ALL"
-    @all = []
-    Post.all.each do |post|
-      next if post.tags.blank?
-      post.tags.each do |tag_name|
-        tag = self.find_by_name(tag_name)
-        if tag.nil?
-          tag = self.new(tag_name)
-          @all << tag
+    @all ||= begin
+      Rails.logger.debug "!!! TAG ALL"
+      @all = []
+      Post.all.each do |post|
+        post.tags.each do |tag|
+          unique_tag = self.find(tag) || tag
+          unique_tag.add_post(post)
+          @all << tag if (unique_tag == tag)
         end
-        tag.add_post(post)
       end
+      @all.sort! { |a, b| a.name <=> b.name }
     end
-    @all.sort! { |a, b| a.name <=> b.name }
   end
 
   def self.clear_cache
@@ -32,7 +25,8 @@ class Tag
     @all = nil
   end
 
-  def self.find(id)
+  def self.find(tag_or_id)
+    id = tag_or_id.is_a?(Tag) ? tag_or_id.id : tag_or_id
     self.all.each do |tag|
       return tag if tag.id == id
     end
@@ -46,11 +40,21 @@ class Tag
     nil
   end
 
+  # Init
+
   def initialize(name)
     self.id = name.parameterize
     self.name = name
     self.posts = []
   end
+
+  # Accessors
+
+  def path
+    "tags/#{self.id}"
+  end
+
+  # Posts
 
   def add_post(post)
     self.posts << post

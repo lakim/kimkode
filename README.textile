@@ -6,8 +6,9 @@ h1. TODO
 * posts#index => OK
 * tags#show => OK
 * tags helper => OK
+* tags identity map
 * code highlight
-* caching
+* shared cache instead of class variable cache
 * reload if Rails cache is disabled
 * pagination
 * manage drafts (*)

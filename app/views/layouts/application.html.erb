@@ -7,14 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="container show-grid">
+  <header class="container main">
     <a id="logo" href="/"><%= image_tag("logo.png") %></a>
     <h1><a href="/">kimkode</a></h1>
     <h2>iOS and Ruby developer</h2>
     <a id="twitter" href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a>
   </header>
-  <div class="container">
+  <section class="container">
     <%= yield %>
-  </div>
+  </section>
 </body>
 </html>

@@ -8,8 +8,12 @@ class Post < Content
     @published_at = Date.parse(s)
   end
 
+  def tags
+    @tags || []
+  end
+
   def tags=(s)
-    @tags = s.split(",").map(&:strip)
+    @tags = s.split(",").map { |name| Tag.new(name.strip) }
   end
 
   # Finders
