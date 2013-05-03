@@ -1,6 +1,6 @@
 class Content
 
-  attr_accessor :filename, :slug, :extensions, :title, :body
+  attr_accessor :filename, :slug, :extensions, :title, :body, :summary
 
   # Class methods
   
@@ -46,6 +46,7 @@ class Content
   end
 
   # Init
+
   def initialize(filename, data, body, extensions)
     self.filename = filename
     data.each do |k, v|
