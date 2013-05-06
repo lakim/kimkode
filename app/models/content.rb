@@ -1,4 +1,5 @@
 class Content
+  include ActiveModel::Conversion
 
   attr_accessor :filename, :slug, :extensions, :title, :body, :summary
 

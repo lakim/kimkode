@@ -2,7 +2,7 @@
   <header>
     <h1><%= link_to post.title, post.path %></h1>
     <small>
-      <time datetime="<%= post.published_at.iso8601 %>" pubdate><%= post.published_at.to_formatted_s(:long_ordinal) %></time>
+      <time datetime="<%= post.published_at.iso8601 %>" pubdate><%= l(post.published_at, format: :long) %></time>
       <ul class="tags">
         <% post.tags.each do |tag| %>
           <li><%= link_to tag.name, tag.path %></li>
