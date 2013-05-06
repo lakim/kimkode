@@ -1,7 +1,7 @@
 header.main {
   position: relative;
   margin-top: 80px;
-  margin-bottom: 42px;
+  margin-bottom: 50px;
   h1 {
     margin: 0;
     padding-top: 8px;
@@ -37,6 +37,10 @@ header.main {
   }
 }
 
+section.main {
+  margin-bottom: 36px;
+}
+
 article {
   margin-bottom: 50px;
   header {
@@ -64,6 +68,40 @@ article {
         display: inline;
       }
     }
+  }
+}
+
+nav, footer {
+  width: 680px;
+  margin: 0 auto;
+  padding: 18px 0;
+  text-align: center;
+  border-top: 2px solid #DCDCDC;
+}
+nav {
+  ul {
+    margin: 0;
+    color: $grayLighter;
+  }
+  li {
+    display: inline;
+  }
+  li:after {
+    content: " / ";
+  } 
+  li:last-child:after {
+    content: "";
+  }
+}
+footer {
+  $lineHeight: 30px;
+  line-height: $lineHeight;
+  li {
+    line-height: $lineHeight;
+    list-style: none;
+  }
+  ul {
+    margin-top: 10px;
   }
 }
 

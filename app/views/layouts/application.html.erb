@@ -14,8 +14,24 @@
     <h2>iOS and Ruby developer</h2>
     <a id="twitter" href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a>
   </header>
-  <section class="container">
+  <section class="container main">
     <%= yield %>
   </section>
+  <nav>
+    EXPLORE
+    <ul>
+      <% Tag.all.each do |tag| %>
+        <li><%= link_to tag.name, tag.path %></li>
+      <% end %>
+    </ul>
+  </nav>
+  <footer>
+    Louis-Alban KIM<br/>I'm an iOS/Ruby developer and entrepreneur.
+    <ul>
+      <li><a href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a></li>
+      <li><a href="http://github.com/lakim" target="_blank">Fork me on Github</a></li>
+      <li><a href="mailto:louis@kimkode.com">Contact me</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
