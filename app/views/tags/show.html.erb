@@ -1,4 +1,6 @@
 <% content_for :title, @tag.name %>
 <% content_for :description, "My thoughts on #{@tag.name}" %>
-<h1><%= @tag.name %></h1>
+<header>
+  <h1><%= @tag.name %></h1>
+</header>
 <%= render :template => "posts/index" %>

@@ -39,10 +39,7 @@ header.main {
 
 section.main {
   margin-bottom: 36px;
-}
 
-article {
-  margin-bottom: 50px;
   header {
     margin-bottom: 30px;
     h1 {
@@ -69,6 +66,9 @@ article {
       }
     }
   }
+}
+article {
+  margin-bottom: 50px;
 }
 
 nav, footer {
