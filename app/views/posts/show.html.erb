@@ -1,3 +1,5 @@
+<% content_for :title, @post.title %>
+<% content_for :description, @post.summary %>
 <h1><%= @post.title %></h1>
 <% if @post.author %>
   <div><%= @post.author %></div>
