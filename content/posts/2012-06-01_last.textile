@@ -1,5 +1,5 @@
 ---
 title: Full-stack app testing with backdoor
-tags: ruby, other
+tags: Ruby, iOS
 ---
 Last!
