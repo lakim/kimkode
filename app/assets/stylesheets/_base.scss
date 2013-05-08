@@ -54,8 +54,6 @@ section.main {
     small {
       font-size: 20px;
       font-style: italic;
-    }
-    time {
       color: $grayLighter;
     }
     ul.tags {
@@ -63,6 +61,12 @@ section.main {
       margin: 0 0 0 10px;
       li {
         display: inline;
+      }
+      li:after {
+        content: ", ";
+      }
+      li:last-child:after {
+        content: "";
       }
     }
   }
