@@ -7,7 +7,7 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'haml'
 gem 'tilt'
-gem 'RedCloth'
+gem 'redcarpet'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
