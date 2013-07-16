@@ -51,7 +51,7 @@ class Tag
   # Accessors
 
   def path
-    "tags/#{self.id}"
+    "/tags/#{self.id}"
   end
 
   # Posts
