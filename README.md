@@ -1,4 +1,5 @@
-h1. TODO
+TODO
+----
 
 * content helper: content(slug) => OK
 * specify layout per type => OK
@@ -14,13 +15,15 @@ h1. TODO
 * manage drafts (*)
 * manage index in folders
 * tests tests tests
+* sitemap
 * RSS feed
 * menu file => Menu.items
 
 * extract engine
 ** names : devcms, hackercms
 
-h1. Design inspiration
+Design inspiration
+------------------
 
 http://weareimpero.com/
 http://thisisyoke.com/
