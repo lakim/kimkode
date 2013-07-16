@@ -15,7 +15,7 @@ class Tag
           @all << tag if (unique_tag == tag)
         end
       end
-      @all.sort! { |a, b| a.name <=> b.name }
+      @all.sort_by! { |tag| tag.name.downcase }
     end
   end
 
@@ -62,7 +62,7 @@ class Tag
   end
 
   def sort_posts!
-    self.posts.sort! { |a, b| a.published_at <=> b.published_at }.reverse
+    self.posts.sort_by! { |post| post.published_at }.reverse
   end
 
   def post_count
