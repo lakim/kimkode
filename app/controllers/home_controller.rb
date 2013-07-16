@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  caches_page :index
+
   def index
     @posts = Post.all.last(20)
     # TODO: add caching

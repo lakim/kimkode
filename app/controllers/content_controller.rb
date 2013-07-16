@@ -1,5 +1,7 @@
 class ContentController < ApplicationController
 
+  caches_page :show
+
   def show
     content = Content.find(params[:slug])
     raise ActionController::RoutingError if content.nil?
