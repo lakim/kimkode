@@ -7,9 +7,9 @@ TODO
 * posts#index => OK
 * tags#show => OK
 * tags helper => OK
-* tags identity map
+* tags identity map => OK
+* page caching => OK
 * code highlight
-* shared cache instead of class variable cache
 * reload if Rails cache is disabled
 * pagination
 * manage drafts (*)
@@ -18,6 +18,7 @@ TODO
 * sitemap
 * RSS feed
 * menu file => Menu.items
+* config file (twitter account, GA id, ...)
 
 * extract engine
 ** names : devcms, hackercms
