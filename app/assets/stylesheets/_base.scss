@@ -26,7 +26,7 @@ header.main {
   a#logo {
     display: block;
     position: absolute;
-    bottom: 0;
+    top: -62px;
     left: -68px;
   }
   a#twitter {
@@ -41,7 +41,7 @@ section.main {
   margin-bottom: 36px;
 
   header {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     h1 {
       $height: 38px;
       font-size: $height;
@@ -109,7 +109,63 @@ footer {
   }
 }
 
-/* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 
+}
+@media (max-width: 979px) {
+  header.main {
+    h2 {
+      position: static;
+      margin-top: 20px;
+    }
+    a#twitter {
+      position: static;
+      margin-top: 6px;
+    }
+  }
+}
+@media (max-width: 860px), (min-width: 979px) and (max-width: 1080px) {
+  header.main {
+    a#logo {
+      left: -20px;
+    }
+    h1 {
+      a, a:hover {
+        padding-left: 128px;
+      }
+    }
+  }
+}
+@media (max-width: 720px) {
+  nav, footer {
+    width: auto;
+    margin: 0 20px;
+  }  
+}
+@media (max-width: 560px) {
+  header.main {
+    margin-top: 18px;
+    a#logo {
+      position: relative;
+      top: 0;
+      left: 18px;
+    }
+    h1 {
+      a, a:hover {
+        padding-left: 0;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  header.main {
+    a#logo {
+      left: 0;
+    }
+    h1 {
+      a, a:hover {
+        font-size: 80px;
+      }
+    }
+  }
 }
