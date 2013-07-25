@@ -1,11 +1,30 @@
 class Content
   include ActiveModel::Conversion
+  extend ActiveModel::Naming
 
-  attr_accessor :filename, :slug, :extensions, :title, :body, :summary
+  attr_accessor :filename, :slug, :extensions, :title, :body, :summary, :updated_at
 
   # Class methods
+
+  def self.all
+    @all ||= begin
+      # TODO: use tap
+      all = []
+      Dir[File.join(Rails.root, "content", self.name.pluralize.underscore, "[^\*]*")].each do |f|
+        all << self.parse(f)
+      end
+      all.sort { |a, b| a.sort_value <=> b.sort_value }
+    end
+  end
+
+  def self.last
+    @last ||= begin
+      self.all.last
+    end
+  end
   
   def self.find(slug)
+    # TODO: use cache instead of parsing again
     filename = self.filename_from_slug(slug)
     return if filename.nil?
 
@@ -34,7 +53,8 @@ class Content
       end
     end
     data ||= {}
-    data["published_at"] = published_at
+    # TODO: move published_at in Post implementation of read_file
+    data["published_at"] = published_at unless published_at.blank?
     [ data, body, extensions ]
   end
 
@@ -70,6 +90,18 @@ class Content
 
   def path
     slug
+  end
+
+  def to_param
+    path
+  end
+
+  def persisted?
+    false
+  end
+
+  def sort_value
+    path
   end
 
 end

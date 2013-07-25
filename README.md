@@ -9,15 +9,12 @@ TODO
 * tags helper => OK
 * tags identity map => OK
 * page caching => OK
+* manage drafts (*) => OK
+* sitemap => OK
 * code highlight
-* reload if Rails cache is disabled
 * pagination
-* manage drafts (*)
-* manage index in folders
 * tests tests tests
-* sitemap
 * RSS feed
-* menu file => Menu.items
 * config file (twitter account, GA id, ...)
 
 * extract engine
