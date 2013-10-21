@@ -13,7 +13,7 @@ class Content
       Dir[File.join(Rails.root, "content", self.name.pluralize.underscore, "[^\*]*")].each do |f|
         all << self.parse(f)
       end
-      all.sort { |a, b| a.sort_value <=> b.sort_value }
+      all.sort { |a, b| a.sort_value <=> b.sort_value }.reverse
     end
   end
 
