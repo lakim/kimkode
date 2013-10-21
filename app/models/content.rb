@@ -8,7 +8,7 @@ class Content
 
   def self.all
     @all ||= begin
-      # TODO: use tap
+      Rails.logger.debug "!!! Content#all"
       all = []
       Dir[File.join(Rails.root, "content", self.name.pluralize.underscore, "[^\*]*")].each do |f|
         all << self.parse(f)
@@ -18,13 +18,10 @@ class Content
   end
 
   def self.last
-    @last ||= begin
-      self.all.last
-    end
+    @last ||= self.all.last
   end
   
   def self.find(slug)
-    # TODO: use cache instead of parsing again
     filename = self.filename_from_slug(slug)
     return if filename.nil?
 
@@ -53,7 +50,6 @@ class Content
       end
     end
     data ||= {}
-    # TODO: move published_at in Post implementation of read_file
     data["published_at"] = published_at unless published_at.blank?
     [ data, body, extensions ]
   end

@@ -18,10 +18,6 @@ class Post < Content
 
   # Overrides
 
-  def self.all
-    super.reverse
-  end
-
   def sort_value
     published_at
   end
@@ -35,7 +31,7 @@ class Post < Content
   # Caching
   
   def self.clear_cache
-    Rails.logger.debug "!!! POST CLEAR CACHE"
+    Rails.logger.debug "!!! Post#clear_cache"
     @all = nil
   end
 

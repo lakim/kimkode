@@ -5,12 +5,12 @@ class Tag
   # Finders
 
   def self.all
-    @all ||= begin
-      Rails.logger.debug "!!! TAG ALL"
+    @all || begin
+      Rails.logger.debug "!!! Tag#all"
       @all = []
       Post.all.each do |post|
         post.tags.each do |tag|
-          unique_tag = self.find(tag) || tag
+          unique_tag = find(tag) || tag
           unique_tag.add_post(post)
           @all << tag if (unique_tag == tag)
         end
@@ -20,24 +20,17 @@ class Tag
   end
 
   def self.clear_cache
-    Rails.logger.debug "!!! TAG CLEAR CACHE"
-    puts "!!! TAG CLEAR CACHE"
+    Rails.logger.debug "!!! Tag#clear_cache"
     @all = nil
   end
 
   def self.find(tag_or_id)
     id = tag_or_id.is_a?(Tag) ? tag_or_id.id : tag_or_id
-    self.all.each do |tag|
-      return tag if tag.id == id
-    end
-    nil
+    all.find { |tag| tag.id == id }
   end
 
   def self.find_by_name(name)
-    self.all.each do |tag|
-      return tag if tag.name == name
-    end
-    nil
+    all.find { |tag| tag.name == name }
   end
 
   # Init
