@@ -9,8 +9,6 @@ class ContentController < ApplicationController
     instance_variable_set("@#{content.class.name.underscore}", content)
     @body = process_body(content)
     render "#{content.class.name.underscore.pluralize}/show", :layout => content.layout
-    # TODO: add caching
-    # Cache key: filename-hash|date
   end
 
   private
