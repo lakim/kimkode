@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Kimkode::Application.load_tasks
+Louisalbankim::Application.load_tasks

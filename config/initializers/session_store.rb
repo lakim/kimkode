@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Kimkode::Application.config.session_store :cookie_store, key: '_kimkode_session'
+Louisalbankim::Application.config.session_store :cookie_store, key: '_louisalbankim_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Kimkode::Application.config.session_store :active_record_store
+# Louisalbankim::Application.config.session_store :active_record_store
