@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield :title %> - kimkode</title>
+  <title><%= yield :title %> - Louis-Alban KIM</title>
   <meta name="description" content="<%= yield :description %>">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -11,9 +11,15 @@
 <body>
   <header class="container main">
     <a id="logo" href="/"><%= image_tag("logo.png") %></a>
-    <h1><a href="/">kimkode</a></h1>
-    <h2>iOS and Ruby developer</h2>
-    <a id="twitter" href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a>
+    <div id="titles">
+      <h1><a href="/">Louis-Alban KIM</a></h1>
+      <h2>iOS and Ruby developer</h2>
+    </div>
+    <ul id="links">
+      <li><a href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a></li>
+      <li><a href="http://github.com/lakim" target="_blank">Fork me on Github</a></li>
+      <li><a href="mailto:louis@kimkode.com">Contact me</a></li>
+    </ul>
   </header>
   <section class="container main">
     <%= yield %>
@@ -28,11 +34,6 @@
   </nav>
   <footer>
     Louis-Alban KIM<br/>I'm an iOS/Ruby developer and entrepreneur.
-    <ul>
-      <li><a href="https://twitter.com/louisalbankim" target="_blank">Follow me on Twitter</a></li>
-      <li><a href="http://github.com/lakim" target="_blank">Fork me on Github</a></li>
-      <li><a href="mailto:louis@kimkode.com">Contact me</a></li>
-    </ul>
   </footer>
 </body>
 </html>

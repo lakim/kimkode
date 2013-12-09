@@ -2,22 +2,23 @@ header.main {
   position: relative;
   margin-top: 80px;
   margin-bottom: 50px;
+  #titles {
+    margin-left: 80px;
+  }
   h1 {
     margin: 0;
-    padding-top: 8px;
+    $height: 56px;
+    font-size: $height;
+    line-height: $height + 8px;
     a, a:hover {
       display: block;
-      padding-left: 80px;
-      font-size: 100px;
       color: $black;
       text-decoration: none;
     }
   }
   h2 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 0;
+    margin-top: 4px;
+    padding-left: 4px;
     font-family: $sansFontFamily;
     font-size: 26px;
     line-height: 22px;
@@ -26,14 +27,20 @@ header.main {
   a#logo {
     display: block;
     position: absolute;
-    top: -62px;
+    top: -57px;
     left: -68px;
   }
-  a#twitter {
+  ul#links {
     display: block;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 19px;
+    margin: 0;
+    text-align: right;
+    li {
+      line-height: 27px;
+      list-style: none;
+    }
   }
 }
 
@@ -98,15 +105,7 @@ nav {
   }
 }
 footer {
-  $lineHeight: 30px;
-  line-height: $lineHeight;
-  li {
-    line-height: $lineHeight;
-    list-style: none;
-  }
-  ul {
-    margin-top: 10px;
-  }
+  line-height: 30px;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -114,25 +113,38 @@ footer {
 }
 @media (max-width: 979px) {
   header.main {
-    h2 {
-      position: static;
-      margin-top: 20px;
+    h1 {
+      $height: 50px;
+      font-size: $height;
+      line-height: $height + 10px;
     }
-    a#twitter {
-      position: static;
-      margin-top: 6px;
+    ul#links {
+      top: 12px;
     }
   }
 }
-@media (max-width: 860px), (min-width: 979px) and (max-width: 1080px) {
+@media (min-width: 979px) and (max-width: 1080px) {
   header.main {
     a#logo {
       left: -20px;
     }
-    h1 {
-      a, a:hover {
-        padding-left: 128px;
-      }
+    #titles {
+      margin-left: 128px;
+    }
+  }
+}
+@media (max-width: 860px) {
+  header.main {
+    a#logo {
+      left: -26px;
+    }
+    #titles {
+      margin-left: 122px;
+    }
+    ul#links {
+      position: static;
+      text-align: left;
+      margin-left: 124px;
     }
   }
 }
@@ -140,7 +152,7 @@ footer {
   nav, footer {
     width: auto;
     margin: 0 20px;
-  }  
+  }
 }
 @media (max-width: 560px) {
   header.main {
@@ -148,12 +160,10 @@ footer {
     a#logo {
       position: relative;
       top: 0;
-      left: 18px;
+      left: -8px;
     }
-    h1 {
-      a, a:hover {
-        padding-left: 0;
-      }
+    #titles, ul#links {
+      margin-left: 60px;
     }
   }
 }
@@ -161,11 +171,6 @@ footer {
   header.main {
     a#logo {
       left: 0;
-    }
-    h1 {
-      a, a:hover {
-        font-size: 80px;
-      }
     }
   }
 }
