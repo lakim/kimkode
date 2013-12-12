@@ -4,8 +4,9 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# Ignore bundler config
+# Bundler
 /.bundle
+/vendor/bundle
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
@@ -14,4 +15,12 @@
 /log/*.log
 /tmp
 
+# Mac OS X
 .DS_Store
+
+# Vagrant
+/.vagrant
+
+# Assets and cache
+/public/assets
+/public/cache

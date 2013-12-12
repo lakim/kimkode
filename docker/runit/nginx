@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+. /etc/default/nginx
+exec /usr/sbin/nginx

@@ -55,5 +55,10 @@ module Louisalbankim
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.serve_static_assets = false
+    config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+
+    config.action_controller.page_cache_directory = Rails.root.join("public/cache")
   end
 end
