@@ -1,3 +1,24 @@
+Install
+-------
+
+On your local machine:
+
+```shell
+vagrant up
+vagrant ssh
+```
+
+On the VM:
+
+```shell
+cd /home/deploy/current
+docker build -t louisalbankim ./docker
+docker run -p 80:80 -p 2222:22 \
+  -v /home/deploy/current:/home/deploy/current -v /home/deploy/shared:/home/deploy/shared \
+  -e RACK_ENV=development \
+  louisalbankim
+```
+
 TODO
 ----
 

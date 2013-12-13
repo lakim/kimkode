@@ -37,13 +37,6 @@ RUN adduser deploy --uid 1111 --disabled-password --gecos ""
 ADD config/authorized_keys /home/deploy/.ssh/
 RUN chown -R deploy:deploy /home/deploy/.ssh
 
-# App
-RUN mkdir -p /home/deploy/current
-RUN mkdir -p /home/deploy/shared/assets
-RUN mkdir -p /home/deploy/shared/tmp
-RUN mkdir -p /home/deploy/shared/cache
-RUN chown -R deploy:deploy /home/deploy/shared
-
 # Nginx
 ADD config/nginx.conf /etc/nginx/
 ADD config/louisalbankim.conf /etc/nginx/sites-enabled/

@@ -6,6 +6,10 @@ Vagrant.configure("2") do |config|
   end
   config.vm.network :private_network, ip: "192.168.100.10"
   config.vm.provision "shell", inline: %Q{
+    adduser deploy --uid 1111 --disabled-password --gecos ""
+    mkdir -p /home/deploy/current
+    mkdir -p /home/deploy/shared
+    chown deploy:deploy /home/deploy/shared
     sudo apt-get update
     sudo apt-get install -y linux-image-generic-lts-raring linux-headers-generic-lts-raring
   }
