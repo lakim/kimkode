@@ -1,3 +1,2 @@
 class Page < Content
-
 end

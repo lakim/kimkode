@@ -6,7 +6,6 @@ class Tag
 
   def self.all
     @all || begin
-      Rails.logger.debug "!!! Tag#all"
       @all = []
       Post.all.each do |post|
         post.tags.each do |tag|
@@ -20,7 +19,6 @@ class Tag
   end
 
   def self.clear_cache
-    Rails.logger.debug "!!! Tag#clear_cache"
     @all = nil
   end
 

@@ -31,7 +31,6 @@ class Post < Content
   # Caching
   
   def self.clear_cache
-    Rails.logger.debug "!!! Post#clear_cache"
     @all = nil
   end
 

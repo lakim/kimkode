@@ -8,7 +8,6 @@ class Content
 
   def self.all
     @all ||= begin
-      Rails.logger.debug "!!! Content#all"
       all = []
       Dir[File.join(Rails.root, "content", self.name.pluralize.underscore, "[^\*]*")].each do |f|
         all << self.parse(f)
