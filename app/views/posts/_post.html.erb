@@ -11,4 +11,7 @@
     </small>
   </header>
   <div><%= @body || post.summary %></div>
+  <% if !@body %>
+    <div><%= link_to "Read more", post.path %></div>
+  <% end %>
 </article>
