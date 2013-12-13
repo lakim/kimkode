@@ -45,5 +45,5 @@ RUN rm -f /etc/service/nginx/down
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD louisalbankim.sh /sbin/
-CMD ["/sbin/louisalbankim.sh"]
+ADD container.sh /sbin/
+CMD ["/sbin/container.sh"]
