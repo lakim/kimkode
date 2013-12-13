@@ -53,9 +53,9 @@ TODO
 * page caching => OK
 * manage drafts (*) => OK
 * sitemap => OK
-* links should be target=_blank
-* move page cache to public/cache
+* move page cache to public/cache => OK
 * code highlight
+* links should be target=_blank
 * pagination
 * RSS feed
 * config file (twitter account, GA id, ...)
