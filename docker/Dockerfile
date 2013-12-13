@@ -33,9 +33,7 @@ RUN rm -f /root/.ssh/authorized_keys /home/*/.ssh/authorized_keys
 RUN cd /tmp && /usr/bin/ruby2.0 '/usr/share/passenger/ruby_extension_source/extconf.rb' && make install
 
 # Add deploy user
-RUN adduser deploy --uid 1111 --disabled-password --gecos ""
-ADD config/authorized_keys /home/deploy/.ssh/
-RUN chown -R deploy:deploy /home/deploy/.ssh
+RUN adduser deploy --no-create-home --uid 1111 --disabled-password --gecos ""
 
 # Nginx
 ADD config/nginx.conf /etc/nginx/
