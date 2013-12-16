@@ -40,6 +40,27 @@ ssh vagrant@33.33.33.10 -i ~/.ssh/vagrant 'cat | sudo -u deploy tee /home/deploy
 ssh -p 2222 deploy@33.33.33.10
 ```
 
+Production
+----------
+
+```shell
+# Provision the server
+ssh root@louisalbankim.com 'bash -s' < ./docker/host.sh
+# Copy your public key to the deploy user
+ssh root@louisalbankim.com 'cat | sudo -u deploy tee /home/deploy/.ssh/authorized_keys' < ~/.ssh/id_rsa.pub
+# Capistrano
+```
+
+```shell
+ssh root@louisalbankim.com
+cd /home/deploy/current
+docker build -t louisalbankim ./docker
+docker run -p 80:80 -p 2222:22 \
+  -v /home/deploy:/home/deploy \
+  -e RACK_ENV=production \
+  louisalbankim
+```
+
 TODO
 ----
 
@@ -79,3 +100,7 @@ Proxmox keyboard config
 * persist deploy folder on host => OK
 * in prod, deploy with capistrano to container (or host?)
 * verify http headers in production for cached pages
+* use minimal image
+* Firewall
+* Remove passenger log messages
+* Google Analytics
