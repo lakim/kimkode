@@ -99,4 +99,7 @@ class Content
     path
   end
 
+  def html_body
+    @html_body ||= Kramdown::Document.new(body, coderay_css: :class, coderay_line_numbers: nil).to_html.html_safe
+  end
 end

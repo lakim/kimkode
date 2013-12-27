@@ -5,8 +5,8 @@ gem 'rails', '3.2.9'
 gem 'sqlite3'
 gem 'jquery-rails'
 gem 'haml'
-gem 'tilt'
-gem 'redcarpet'
+gem 'kramdown'
+gem 'coderay'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
