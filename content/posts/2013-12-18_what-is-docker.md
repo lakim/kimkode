@@ -44,6 +44,9 @@ A basic Docker example
 I will show you a very simple way to get started with Docker.
 All you need is [Vagrant](http://www.vagrantup.com/).
 
+Here is the source:  
+[https://github.com/lakim/what-is-docker](https://github.com/lakim/what-is-docker)
+
 First, create a new folder. We will need only 2 files at the root of this folder:
 
 ~~~ ruby
