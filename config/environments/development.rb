@@ -35,6 +35,8 @@ Louisalbankim::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
+  # Watch content directory and clear cache on content change
+  config.watchable_dirs['content'] = [:md]
   config.to_prepare do
     Post.clear_cache
     Tag.clear_cache
