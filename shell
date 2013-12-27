@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -z $RACK_ENV ]; then
+  RACK_ENV=development
+fi
+docker run -i -t -p 80:80 -p 2222:22 \
+  -v /home/deploy:/home/deploy \
+  -v /vagrant:/vagrant \
+  -e RACK_ENV=$RACK_ENV \
+  louisalbankim \
+  bash -l
