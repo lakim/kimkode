@@ -1,3 +1,29 @@
+figure {
+  margin: 0;
+}
+figcaption {
+  font-size: 0.8em;
+}
+blockquote {
+  border: none;
+  padding: 0 6% 0 6%;
+  p {
+    font-style: italic;
+    font-size: 24px;
+  }
+}
+pre, code {
+  color: $grayDark;
+}
+pre {
+  background-color: transparent;
+  font-size: 18px;
+  word-wrap: normal;
+  overflow: scroll;
+  white-space: pre;
+  display: block;
+}
+
 header.main {
   position: relative;
   margin-top: 80px;
@@ -50,7 +76,7 @@ section.main {
   header {
     margin-bottom: 24px;
     h1 {
-      $height: 38px;
+      $height: 40px;
       font-size: $height;
       line-height: $height;
       margin-bottom: 0;
@@ -80,6 +106,31 @@ section.main {
 }
 article {
   margin-bottom: 50px;
+  word-break: break-word;
+  h2 {
+    font-size: 1.6em;
+  }
+  $margin: 20px;
+  .float {
+    max-width: 420px;
+    margin-bottom: $margin;
+    img {
+      width: 100%;
+    }
+  }
+  .right {
+    @extend .float;
+    float: right;
+    margin-left: $margin;
+  }
+  .left {
+    @extend .float;
+    float: left;
+    margin-right: $margin;
+  }
+  .overflow {
+    overflow: hidden;
+  }
 }
 
 nav, footer {
@@ -152,6 +203,13 @@ footer {
   nav, footer {
     width: auto;
     margin: 0 20px;
+  }
+  article {
+    .left, .right {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 @media (max-width: 560px) {
