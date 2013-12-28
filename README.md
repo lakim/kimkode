@@ -55,7 +55,7 @@ ssh root@louisalbankim.com 'cat | sudo -u deploy tee /home/deploy/.ssh/authorize
 ssh root@louisalbankim.com
 cd /home/deploy/current
 docker build -t louisalbankim ./docker
-docker run -p 80:80 -p 2222:22 \
+docker run -d -p 80:80 -p 2222:22 \
   -v /home/deploy:/home/deploy \
   -e RACK_ENV=production \
   louisalbankim
