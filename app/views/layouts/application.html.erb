@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= yield :title %> - Louis-Alban KIM</title>
+  <title><%= yield :title %></title>
   <meta name="description" content="<%= yield :description %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="<%= yield :title %>">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <link rel="shortcut icon" href="/favicon.ico">
@@ -37,6 +38,6 @@
   <footer>
     Louis-Alban KIM<br/>I'm an iOS/Ruby developer and entrepreneur.
   </footer>
-  <%= render 'analytics' %>
+  <%= render 'async_javascripts' %>
 </body>
 </html>

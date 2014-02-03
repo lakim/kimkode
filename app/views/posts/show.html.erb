@@ -1,4 +1,15 @@
 <% content_for :title, @post.title %>
 <% content_for :description, @post.summary %>
 <%= render @post %>
+<div id="share">
+  <div class="share-btn">
+    <div class="g-plus" data-action="share" data-annotation="bubble"></div>
+  </div>
+  <div class="share-btn">
+    <div class="fb-share-button" data-type="button_count"></div>
+  </div>
+  <div class="share-btn">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="louisalbankim">Tweet</a>
+  </div>
+</div>
 <p>You should <a href="http://twitter.com/louisalbankim">follow me on Twitter!</a></p>
