@@ -93,7 +93,12 @@ http://thisisyoke.com/
 
 Articles
 --------
-Proxmox keyboard config
+
+* bundle install -j 4
+* list capybara methods that wait
+
+TODO
+----
 
 * host and container share a data volume (docker run -v ...) => OK
 * configure vagrant shared folder as deploy user => OK
